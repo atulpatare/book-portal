@@ -13,3 +13,8 @@ npx hardhat node
 node scripts/sample-script.js
 npx hardhat help
 ```
+
+1. Deploy command
+```console
+npx hardhat run scripts/deploy.js --network <network-name>
+```

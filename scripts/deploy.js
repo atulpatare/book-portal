@@ -6,7 +6,9 @@ const main = async () => {
     console.log("Account balance :", accountBalance.toString());
 
     const token = await hre.ethers.getContractFactory("BookPortal");
-    const portal = await token.deploy();
+    const portal = await token.deploy({
+        value: hre.ethers.utils.parseEther("0.01"),
+    });
     await portal.deployed();
 
     console.log("BookPortal address : ", portal.address);
